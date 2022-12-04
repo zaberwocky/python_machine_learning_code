@@ -25,3 +25,6 @@ def find_pairs(x)
   return pairs
 
 df.groupby('group_col')['subset_col'].apply(find_pairs)
+
+#find occurences
+df.groupby(['col_1','col_2']).size()
