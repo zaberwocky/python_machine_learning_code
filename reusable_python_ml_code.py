@@ -33,6 +33,10 @@ df.groupby(['col_1','col_2']).size()
 #crosstabulation or transposing
 pd.corsstab(df['col1'], df['col2']) # first column becomes rows and second becomes columns with 1 and 0
 
+
+#pivoting - transforming
+df.pivot(index = <id-column>, columns = <columns> , values = <values-column>)
+
 #------------------------------------------------------               Statistics
 
 #jaccard similarity 
@@ -43,4 +47,6 @@ jaccard_score(row1, row1)
 from scipy.distance import pdist, squareform
 jaccard_distances = pdist(df.values, metric = 'jaccard')
 square_jaccard_distances = squareform(jaccard_distances) 
+
+
 
